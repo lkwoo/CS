@@ -1,0 +1,7 @@
+1. JavaScript는 Java의 정신을 이어받은 스크립트 언어이다
+
+2. World Wide Web을 개발한 사람은 Tim Berners-Lee이다.
+
+3. Java의 특징이 아닌 것은?
+
+4. Java
