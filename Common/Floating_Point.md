@@ -11,8 +11,8 @@ IEEE 표준 표현식은 다음과 같다.
 > ***V = (-1)^S * M * 2^E***  
 
 32-Bit와 64-Bit 두 가지 타입이 있다. 비트 수에 따라 표현할 수 있는 범위와 정확도의 차이만 있고 원리는 같다.  
-- Single-Precision(32-bit, float in C)  
-- Double-Precision(64-bit, double in C)  
+1. Single-Precision(32-bit, float in C)  
+2. Double-Precision(64-bit, double in C)  
 
 **S(Sign)** 
 - 부호비트. MSB(최상위비트)에 표현된다.
