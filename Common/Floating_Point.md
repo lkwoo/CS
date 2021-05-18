@@ -18,7 +18,8 @@ IEEE 표준 표현식은 다음과 같다.
 - Double-Precision(64-bit, double in C)
 
 ### Single-Precision(32-bit)
-[32 비트 그림]  
+
+32 비트 그림  
 
 1. S는 MSB에 표현됩니다.
 2. E는 30 ~ 23번 비트에 표현되며 3가지로 구분됩니다.
