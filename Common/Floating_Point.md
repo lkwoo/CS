@@ -17,20 +17,17 @@ IEEE 표준 표현식은 다음과 같다.
 **S(Sign)** 
 - 부호비트. MSB(최상위비트)에 표현된다.
 - **0** 일 때 양수, **1** 일 때 음수이다.  
-- ㅇㄴㅇㄹㄴ
 
-E(Exponent) : 지수부(2의 승수)를 나타냅니다.  
-M(Mantissa) : Significand 또는 Mantissa에 해당하는 부분입니다.   
+**E(Exponent)**
+- 지수부(2의 승수)를 나타냅니다.  
+- Single-Precision은 8bit, Double_Precision은 11bit로 표현되며 3가지로 구분됩니다.  
+    1. Normalized Values : 0000_0001 ~ 1111_1110,  
+    2. Denomalized Values : 모든 bit가 0
+    3. Special Values : 모든 bit가 1
+        - M == 0 : +Inf, -Inf (Sign을 따른다)
+        - M != 0 : NaN(Not a Number)
 
-
-
-
-S : Sign
-  - M
-
-E는 30 ~ 23번 비트에 표현되며 3가지로 구분됩니다.    
-    - Normalized Values : 0000_0001 ~ 1111_1110, 
-    - Denomalized Values
-    - Special Values
-3. M은 22 ~ 0번 비트에 표현됩니다.  
-    - E가 0이 아닌 경우(Normalized Values) 맨 앞의 1이 생략된 것으로 인코딩 됩니다. ex) 0100...1111 -> 10100...1111
+**M(Mantissa)**
+- Significand 또는 Mantissa에 해당하는 부분입니다.   
+- M은 22 ~ 0번 비트에 표현됩니다.  
+- E가 0이 아닌 경우(Normalized Values) 맨 앞의 1이 생략된 것으로 인코딩 됩니다. ex) 0100...1111 -> 10100...1111
