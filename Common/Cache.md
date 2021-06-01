@@ -19,7 +19,7 @@ Memory Hierarchy에서 k Level과 K+1 Level의 관계에 Cache의 개념이 적�
 그럼 Cache의 크기를 키우면 되지 않나요? 그럼 Cache 자체가 느려집니다. 또 전력 소비도 커집니다.
 
 ### Cache Line
-![Cahe Algo](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2017/c14/c14s1/Slide25.png){: width="200px" height="200px"}
+<img src="../image/Cache_Algo.png" width="600" height="500">
 Cache Line = Data Block + Tag  
 
 ### Average Memory Access Time
