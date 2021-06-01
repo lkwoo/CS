@@ -26,7 +26,12 @@ Cache Line = Data Block + Tag
 Cache의 성능은 AMAT(Average Memory Access Time)으로 나타낼 수 있다.  
 > AMAT = Hit Time + (Miss Rate * Miss Penalty)  
 
-위의 식은 Cache의 Block Size에 영향을 받는다.
-Block Size
+위의 식은 Cache의 Block Size에 영향을 받는다.  
+<img src="../image/Cache_Block.png" width="600" height="500">  
+Block Size가 커지면 가져와야할 Data의 크기도 커지므로 선형적으로 시간이 증가한다.  
+DRAM의 접근에 대한 시간 자체가 크므로 Block Size의 증가에 따른 패널티는 크지 않다.  
+그러나 제한된 Cache 용량에서 Block Size의 증가는 Cache Line 수의 감소를 의미합니다.  
+Spatial Localty에 의해 Miss Rate가 감소하다가 RAM의 다양한 영역(Code, Data, Stack, Heap)이 요구되는 프로그램의 특성상 Cache Line의 감소로 Miss Rate가 증가하는 경향을 보입니다.  
+따라서 Block Size는 Trade Off가 필요합니다.
 
 [Reference](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2017/c14/c14s1/)
