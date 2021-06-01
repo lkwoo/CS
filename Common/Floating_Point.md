@@ -35,4 +35,8 @@ IEEE 표준 표현식은 다음과 같다.
 - M은 22 ~ 0번 비트에 표현됩니다.  
 - E가 0이 아닌 경우(Normalized Values) 맨 앞의 1이 생략된 것으로 인코딩 됩니다. ex) 0100...1111 -> 10100...1111
 
+## IEEE Floating-Point Rounding
+
+## IEEE Floating-Point Operation
+
 [참고](https://nybounce.wordpress.com/2016/06/24/ieee-754-floating-point%EB%B6%80%EB%8F%99%EC%86%8C%EC%88%98%EC%A0%90-%EC%82%B0%EC%88%A0%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC/)
