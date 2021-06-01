@@ -91,3 +91,42 @@
  12) 슬라이딩 윈도우의 역할
  13) HTTP 응답코드의 종류를 아는대로 설명
  14) MIME 프로토콜 설명
+
+1. 운영체제/프로세스간 통신과 동기화
+1.1 큐와 스택 차이
+1.2 critical section 관련 문제
+1.3 producer/consumer 관련 문제
+
+2. Cache miss
+2.1 Locality에 대한 정의
+2.2 Block size를 늘리면 miss rate가 왜 U자형 그래프 그리는지 설명, block size 크기가 miss penalty에 미치는 영향
+2.3 cache-friendly한 자료구조, T/F 번갈아 나오는 분기에서 branch predictor이 불리한 이유
+
+1. big - o
+
+2. struct와 union의 차이
+
+3. Binary search tree
+3.1개념
+3.2 삽입과 삭제
+3.3 편향 트리에서 균형 트리로 만들기
+
+1. 다익스트라 알고리즘
+1.1 개념
+1.2 O(N^2)의 시간복잡도로 구현하는 다익스트라 알고리즘에서 2차원 배열 채우기 (연결 관계 채우기)
+1.3 주어진 빈 칸 코드로 채우기 (최단 거리를 갱신하는 부분)
+
+1. DB Transaction
+문제 상황 :
+내가 물건을 팔고 네가 물건을 사는데
+너의 DB를 업데이트하는데 문제 생겼다.
+1.1 트랜잭션의 정의
+1.2 트랜잭션 특징	
+1.3 주어진 상황에서 DB 측면에서 어떻게 해결하는가?
+
+2. OS deadlock 문제
+
+3. quick sort
+3.1 개념 정의
+3.2 수도코드
+3.3 오름차순 내림차순 O(n^2) 해결방법
