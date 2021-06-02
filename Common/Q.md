@@ -61,6 +61,9 @@
  22) 프림 알고리즘과 크루스컬 알고리즘의 차이 그리고 시간복잡도는?
  23) Knapsack problem과 Traveling Salesman Problem에 대한 설명
  24) P와 NP, NP-Completeness에 대한 설명
+ 25) 퀵소트와 머지소트를 캐시 히트 율과 연관지어 설명하시오
+ 26) 객체지향 5원칙
+ 27) 객체지향 특징
  
  - 운영체제
  1) OS 무엇이며 핵심 기능은?
@@ -93,15 +96,19 @@
  13) HTTP 응답코드의 종류를 아는대로 설명
  14) MIME 프로토콜 설명
 
-1. 운영체제/프로세스간 통신과 동기화
-1.1 큐와 스택 차이
-1.2 critical section 관련 문제
-1.3 producer/consumer 관련 문제
+1. 운영체제/프로세스간 통신과 동기화  
+- 큐와 스택 차이  
+- critical section 관련 문제  
+- producer/consumer 관련 문제  
 
-2. Cache miss
-2.1 Locality에 대한 정의
-2.2 Block size를 늘리면 miss rate가 왜 U자형 그래프 그리는지 설명, block size 크기가 miss penalty에 미치는 영향
-2.3 cache-friendly한 자료구조, T/F 번갈아 나오는 분기에서 branch predictor이 불리한 이유
+2. Cache miss  
+- Locality에 대한 정의  
+- Block size를 늘리면 miss rate가 왜 U자형 그래프 그리는지 설명, block size 크기가 miss penalty에 미치는 영향  
+- cache-friendly한 자료구조, T/F 번갈아 나오는 분기에서 branch predictor이 불리한 이유  
+
+3. Pipeline
+- Harzard의 종류와 특징
+- 각 단계의 특징 
 
 1. big - o
 
