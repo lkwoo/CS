@@ -39,17 +39,17 @@ Spatial Localty에 의해 Miss Rate가 감소하다가 RAM의 다양한 영역(C
 ## Cache Write Policy
 > Write 결과를 언제 RAM에 반영할까?
 
-<img src="../image/Cache_WP.png" width="600" height="500">
-
+<img src="../image/Cache_WP.png" width="600" height="500"> <img src="../image/Cache_WB.png" width="600" height="500">  
 1. Write Through : Write 명령을 수행하는 즉시 RAM에 반영
     - 단순하다.
     - RAM에 쓰는 동안은 CPU를 Stall하기 때문에 느리다.
     - 항상 최신의 정보가 RAM에 유지된다.
     - 일반적으로 Write연산은 전체의 10~15% 정도라고 하지만 어디까지나 평균일 뿐.
-2. Write Behind : Write가 사용된 Block이 교체될 때, RAM에 반영
-    - 조금 더 빠르다.
-    - 여전히 Cache Miss시의 패널티는 크다.
-3. Write Back : 
+2. Write Back : Write가 사용된 Block이 교체될 때, RAM에 반영
+    - 빠르지만 복잡하다.
+    - Write이 되면 Dirty bit에 1로 표시
+    - Cache에서 내려갈 때, Dirty bit가 1인지만 확인하면 된다.  
+
 
 ### 왜 Cache의 크기를 늘리지 않나요?
 첫 번째로 물리적 구조의 문제입니다. SRAM의 bit당 물리적 크기는 상당합니다. 1bit를 구현하는데 6개의 트랜티스터를 사용하기 때문입니다. 따라서 Cache의 용량을 늘리기 어렵습니다.  
