@@ -47,3 +47,53 @@
         - 상황에 따라 우선순위 변동. 구현 복잡. 유연한 대응
 
 ## Scheduling Algorithm
+1. FCFS(First Come First Service)
+    - 선입선출. 도착시간 기준.
+    - Overhead 낮음
+    - Batch System에는 적합. 대화형에는 부적합
+    - 평균 응답시간 길다. Convoy Effect
+    - Queue
+2. RR(Round Robin) - 공평성
+    - Preemptive Scheduling
+    - 도착 시간 기준. **자원 사용 제한 시간**있음
+    - Process는 할당된 시간이 지나면 자원 반납
+    - 특정 Process의 독점 방지
+    - Context Switch Overhead가 큼
+    - 대화형, 시분할 시스템에 적합
+    - Time Quantum이 시스템 성능을 결정. 무한에 수렴하면 FCFS, 작으면 여러 프로세스가 동시에 수행되는 느낌
+    - Ready-Queue에 줄 서
+3. SPN(Shortest Process Next), SJF(Shortest Job First)
+    - Burst time이 가장 작은 Process 먼저 처리
+    - 평균 대기시간 최소화
+    - 스케쥴링 부하 감소, 메모리 절약, 시스템 효율 향상
+    - 빠른 응답 시간
+    - Starvation 가능성. Aging으로 해결
+    - 정확한 실행시간은 모름. 예측해야해
+4. SRTN(Shortest Remaning Time Next)
+    - SPN의 변형. 잔여 실행시간이 더 적은 프로세스 먼저
+    - 구현하기 복잡
+5. HRRN(High Response Ratio Next) - 효율성
+    - SPN + Aging. Non-Preemptive
+    - Response Ratio가 높은 프로세스 우선
+    - RR = (WT + BT) / BT
+    - 즉 기다릴수록 우선순위 높아짐
+    - 단 여전히 BT를 예측해야하는 어려움이 있다.(어? 딥러닝 각?)
+6. MLQ(Multi Level Queue) - HRRN의 어려움 개선
+    - 작업 별 별도의 Ready Queue를 가짐
+    - 최초 배정된 Queue를 벗어나지 못함. 각각의 Queue는 자신만의 스케줄링 사용
+    - Queue 사이에 우선순위 기반 스케줄링 사용
+        - 시스템 프로세스, High
+        - 대화식 프로세스
+        - 일괄 처리 프로세스, Low
+    - 여러 개의 Queue관리로 Overhead가 큼
+    - 낮은 우선순위는 여전히 Starvation의 위협을 받아
+7. MFQ(Multi-Level Feedback Queue)
+    - Process의 Queue간 이동 허용
+    - 여러 변형이 가능(Aging 등 적용)
+
+
+
+
+
+
+
