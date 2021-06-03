@@ -64,3 +64,29 @@
 - 불필요한 Switching을 줄이는 것이 중요하다 -> Thread
 
 ## Thread
+- Thread : Process에서 자원을 제외한 제어부만을 나타냄  
+- Process(제어정보 sp pc 등, 지역데이터, 스택), Resource(코드, 전역데이터, 힙)
+- Light Weight Process
+- Processor 활용의 기본 단위
+- 구성 요소
+    - Thread ID
+    - Register Set(PC, SP)
+    - Stack(Local Data)
+- 제어 요소 외의 코드, 데이터 및 자원들은 프로세스 내 다른 스레드들과 공유
+
+1. Thread의 장점
+    - 사용자 응답성(Responsiveness) : 일부 스레드의 처리가 지연되어도, 다른 스레드는 작업을 계속 처리 가능
+    - 자원공유(Resource Sharing) : 자원을 공유해서 효율성 증가. Kernel 개입 최소화
+    - 경제성(Economy) : Process의 생성, Context Switching에 비해 효율적
+    - 멀치 프로세서(Multi-Processor)활용 : 병렬처리를 통해 성능 향상 
+2. 사용자 수준 스레드(User Thread)
+    - 사용자 영역의 스레드 라이브러리로 구현됨
+    - 스레드의 생성, 스케줄링 등
+    - POSIX Threads, Win32 Threads, JAVA Thread API 등\
+    - 커널은 Thread의 존재를 모름, Process가 Block 되면 모든 Thread 대기
+3. Kernel 수준 스레드(Kernel Thread)
+    - OS가 직접 관리
+    - Kernel 영역에서 스레드의 생성, 관리 수행. Context Switching 등 Overhead가 큼
+    - Kernel이 각 Thread를 개별적으로 관리
+- Multi-Thread : 혼합형 N:M. N개의 사용자스레드 M개의 커널스레드. N >= M
+ 
