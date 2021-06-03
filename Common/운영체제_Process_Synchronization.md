@@ -48,7 +48,7 @@
     - V(S) : 나올 때
     - 멀티프로세서에서만 사용 가능
     - Busy Waiting
-- Semaphore
+- **Semaphore**
     - 음이 아닌 정수형 변수 S : 초기화, P(), V() 연산으로 접근 가능. OS가 Atomic하게 보장
     - P(S) : 접근할 때. Probern
     - V(S) : 나올 때. Verhogen
@@ -74,6 +74,15 @@
 ## Reader-Writer Problem
 - Reader : 읽는다. N명 동시 접근 가능
 - Writer : 쓴다. 상호 배제 필요
+
+## Eventcount/Sequencer
+- 은행의 번호표와 비슷한 개념
+- Sequencer
+    - 정수형 변수
+    - ticket() 연산으로 접근. 현재까지 생긴 ticket 수 반환
+    - Starvation 해결
+    - Busy Waiting 해결
+    - Low-Level 방법
 
 
 
