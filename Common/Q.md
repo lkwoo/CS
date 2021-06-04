@@ -28,97 +28,118 @@
     - Write 연산이 생기는 즉시 메모리 업데이트 -> WT  
     - Cache에서 Block이 내려갈 때 -> WB
  
- - 데이터 베이스 
- 1) DB 무결성과 정합성 설명
- 2) DB 무결성의 4가지 설명
- 3) DB 제약 조건의 종류와 무결성을 연관 설명
- 4) DB 정규화 단계 설명
- 5) 데이터 베이스 언어 (DDL, DML, DCL, TCL)에 대한 설명
- 6) 뷰 특징과 장단점 설명
- 7) 조인 (내부/외부 조인)에 대한 설명
- 8) JDBC와 ODBC의 차이점 설명
- 9) statement와 preparestatement의 차이점
-10) SQL vs NoSQL (https://siyoon210.tistory.com/130)
- 
-- 웹
- 1) GET과 POST의 차이점
- 2) session과 cookie 차이점과 사용 용도 설명
- 3) HTML과 XML의 차이점과 장단점 설명
- 4) MVC 모델이란, 프레임워크란?
- 5) Spring Framework에 대한 설명 
- 6) JSP와 Servlet의 차이점
- 7) JSP와 ASP 그리고 PHP의 차이점
- 8) AJAX에 대한 설명
- 
- - JAVA
- 1) String과 StringBuffer의 차이점
- 2) Interface와 Abstract의 차이점
- 3) Static의 의미와 선언하지 않은 것과의 차이점
- 4) Heap과 Stack에 대한 설명
- 5) Call by value와 Call by reference 차이점
- 6) Java와 Javascript의 차이점
- 
- - 기타
- 1) 정렬 알고리즘중 가장 빠른 방식과 느린 방식을 설명와 이유
- 2) 탐욕 알고리즘이란?
- 3) 객체란?
- 4) 이진 탐색 방식을 시퀀스 서치와 비교하여 이점을 설명
- 
-
 - 자료구조
- 1) Tree란?
- 2) Binary Tree란?
- 3) Binary Tree에서 Non-leaf와 Leaf 노드 개수의 관계식은?
- 4) Heap Tree란?
- 5) Heap Tree의 데이터 삭제, 추가 과정을 설명하시오
- 6) Tree에서 pre, in ,post order를 설명하시오
- 7) B tree란?
- 8) B Tree의 데이터 삭제 추가 과정
- 9) Array List와 Linked List의 차이점은?
- 10) Graph란?
+1) Tree란?
+    - Connected Acyclic Graph라고도 불리며, 노드 사이의 간선이 최대 1개인 사이클이 없는 그래프입니다.
+2) Binary Tree란?
+    - Binary Tree란 하나의 노드가 최대 두 개의 자식을 가질 수 있는 트리입니다.
+3) Heap Tree란?
+    - P-Queue구현하기 딱이제. 완전 이진 트리
+5) Heap Tree의 데이터 삭제, 추가 과정을 설명하시오
+    - 삽입 : 트리의 마지막에 삽입한 후, 부모 노드와 크기를 비교하며 자리를 찾는다
+    - 삭제 : Root 노드와 마지막 노드를 스왑한 후, 마지막 노드 삭제. 그리고 새로운 root노드는 가장 큰 혹은 가장 작은 노드와 자리를 바꿔가며 제자리를 찾는다
+6) Tree에서 pre, in ,post order를 설명하시오
+    - pre : 전위 순회. 재귀적으로 자신, 왼쪽 자식노드, 오른쪽 자식노드 순으로 탐색한다. DFS
+    - in : 중위 순회. 재귀적으로 왼쪽 자식노드, 자신, 오른쪽 자식노드 순으로 탐색한다. BST 순차탐색
+    - post : 후위 순회. 재귀적으로 왼쪽 자식노드, 오른쪽 자식노드, 자신 순으로 탐색한다.
+    - Level : BFS
+7) BS tree란?
+    - 왼쪽 서브 트리에는 자신보다 작은 값들의 노드만, 우측 서브  트리에는 자신보다 큰 값들의 노드만 있는 자료구조
+8) BS Tree의 데이터 삭제 추가 과정
+    - 삽입 : 루트노드 부터 현재 삽입하려는 값이 크면 오른쪽, 작으면 왼쪽 서브트리로 이동. Null이 나오는 곳이 삽입 위치
+    - 삭제 : 
+        1. 리프 노드인 경우 : 걍 삭제
+        2. 서브 트리가 하나인 경우 : 서브 트리의 루트를 자신으로 대체
+        3. 서브 트리가 두개인 경우 : 왼쪽 서브트리 중 가장 값이 큰 노드 혹은 오른쪽 서브 트리중 가장 값이 작은 노드를 가져온다. 가져오는 노드의 자식 노드에 대한 처리도 빼먹지 말자
+
+9) Array List와 Linked List의 차이점은?
+    - 배열은 인덱스를 통한 빠른 참조가 가능하다. 삽입 삭제에는 불리하다
+    - 링크드 리스트는 삽입 삭제에는 유리하나 탐색은 느리다. 순서대로 
+
+10) Graph란?
+    - 간선과 노드로 구분되며 간선은 단방향 혹은 양방향일 수도 있습니다.
+    - Tree와는 달리 Root 노드의 개념이 없습니다.
  
- - 알고리즘
- 12) Big O란?
- 13) Divide and conquer를 사용한 알고리즘 예를 들어보라
- 14) Divide and conquer와 Dynamic Programming의 차이점 및 유사점은?
- 15) Backtracking과 Branch and Bound의 차이점은? 
- 16) Merge/Quick/Heap sort의 best, average, worst 케이스의 시간 복잡도는?
- 17) Merge sort와 Quick sort의 차이점과 방식은?
- 18) Quick sort와 Bubble sort의 차이점은?
- 19) Floyd 알고리즘이란?
- 20) Dijkstra 알고리즘이란?
- 21) Floyd와 Dijkstra 알고리즘의 차이점과 정의는?
- 22) 프림 알고리즘과 크루스컬 알고리즘의 차이 그리고 시간복잡도는?
- 23) Knapsack problem과 Traveling Salesman Problem에 대한 설명
- 24) P와 NP, NP-Completeness에 대한 설명
- 25) 퀵소트와 머지소트를 캐시 히트 율과 연관지어 설명하시오
- 26) 객체지향 5원칙
- 27) 객체지향 특징
+- 데이터 베이스 
+1) DB 무결성과 정합성 설명
+2) DB 무결성의 4가지 설명
+3) DB 제약 조건의 종류와 무결성을 연관 설명
+4) DB 정규화 단계 설명
+5) 데이터 베이스 언어 (DDL, DML, DCL, TCL)에 대한 설명
+6) 뷰 특징과 장단점 설명
+7) 조인 (내부/외부 조인)에 대한 설명
+8) JDBC와 ODBC의 차이점 설명
+9) statement와 preparestatement의 차이점
+10) SQL vs NoSQL (https://siyoon210.tistory.com/130)
+
+- 웹
+1) GET과 POST의 차이점
+2) session과 cookie 차이점과 사용 용도 설명
+3) HTML과 XML의 차이점과 장단점 설명
+4) MVC 모델이란, 프레임워크란?
+5) Spring Framework에 대한 설명 
+6) JSP와 Servlet의 차이점
+7) JSP와 ASP 그리고 PHP의 차이점
+8) AJAX에 대한 설명
  
+- JAVA
+1) String과 StringBuffer의 차이점
+2) Interface와 Abstract의 차이점
+3) Static의 의미와 선언하지 않은 것과의 차이점
+4) Heap과 Stack에 대한 설명
+5) Call by value와 Call by reference 차이점
+6) Java와 Javascript의 차이점
+
+- 기타
+1) 정렬 알고리즘중 가장 빠른 방식과 느린 방식을 설명와 이유
+2) 탐욕 알고리즘이란?
+3) 객체란?
+4) 이진 탐색 방식을 시퀀스 서치와 비교하여 이점을 설명
+
+
 
  
- - 네트워크와 인프라 
- 1) GET과 POST의 차이점
- 2) TCP/IP, UDP 프로토콜 설명
- 3) MTTR, MTTF, MTBF에 대한 설명
- 4) 파티션 테이블이 필요한 이유?
- 5) OSI 7 계층을 나눈 이유
- 6) TCP 3 hand shaking이란?
- 7) L2, L3, L4 차이점
- 8) 허브와 스위치의 차이점
- 9) 파이썬과 다른 언어의 차이점
- 10) 데이터 계층의 PDU는 무엇인가?
- 11) 시퀀스 넘버에 대한 역할
- 12) 슬라이딩 윈도우의 역할
- 13) HTTP 응답코드의 종류를 아는대로 설명
- 14) MIME 프로토콜 설명
+- 알고리즘
+12) Big O란?
+13) Divide and conquer를 사용한 알고리즘 예를 들어보라
+14) Divide and conquer와 Dynamic Programming의 차이점 및 유사점은?
+15) Backtracking과 Branch and Bound의 차이점은? 
+16) Merge/Quick/Heap sort의 best, average, worst 케이스의 시간 복잡도는?
+17) Merge sort와 Quick sort의 차이점과 방식은?
+18) Quick sort와 Bubble sort의 차이점은?
+19) Floyd 알고리즘이란?
+20) Dijkstra 알고리즘이란?
+21) Floyd와 Dijkstra 알고리즘의 차이점과 정의는?
+22) 프림 알고리즘과 크루스컬 알고리즘의 차이 그리고 시간복잡도는?
+23) Knapsack problem과 Traveling Salesman Problem에 대한 설명
+24) P와 NP, NP-Completeness에 대한 설명
+25) 퀵소트와 머지소트를 캐시 히트 율과 연관지어 설명하시오
+26) 객체지향 5원칙
+27) 객체지향 특징
+
+ 
+- 네트워크와 인프라 
+1) GET과 POST의 차이점
+2) TCP/IP, UDP 프로토콜 설명
+3) MTTR, MTTF, MTBF에 대한 설명
+4) 파티션 테이블이 필요한 이유?
+5) OSI 7 계층을 나눈 이유
+6) TCP 3 hand shaking이란?
+7) L2, L3, L4 차이점
+8) 허브와 스위치의 차이점
+9) 파이썬과 다른 언어의 차이점
+10) 데이터 계층의 PDU는 무엇인가?
+11) 시퀀스 넘버에 대한 역할
+12) 슬라이딩 윈도우의 역할
+13) HTTP 응답코드의 종류를 아는대로 설명
+14) MIME 프로토콜 설명
 
 1. 운영체제/프로세스간 통신과 동기화  
 - 큐와 스택 차이  
 - critical section 관련 문제  
 - producer/consumer 관련 문제  
 
-2. Cache miss  
+2. Cache Miss  
 - Locality에 대한 정의  
 - Block size를 늘리면 miss rate가 왜 U자형 그래프 그리는지 설명, block size 크기가 miss penalty에 미치는 영향  
 - cache-friendly한 자료구조, T/F 번갈아 나오는 분기에서 branch predictor이 불리한 이유  
