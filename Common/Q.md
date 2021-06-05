@@ -60,6 +60,17 @@
     - 간선과 노드로 구분되며 간선은 단방향 혹은 양방향일 수도 있습니다.
     - Tree와는 달리 Root 노드의 개념이 없습니다.
  
+- 웹
+1) GET과 POST의 차이점
+    - 둘 다 클라이언트에서 서버로 데이터를 보낸다는 공통점이 있습니다.
+    - GET : 이름 그대로 가져오는 것입니다. SQL의 Select와 같이 서버에서 데이터를 가져와 보여주는 용도로 사용합니다.
+    - POST : 서버의 값이나 상태를 바꾸기 위해 사용합니다.
+2) session과 cookie 차이점과 사용 용도 설명
+    - 웹에 필요한 정보를 저장하는데 쓰입니다.
+    - Session : 세션은 서버에 Object 형식으로 저장됩니다. 그리고 보안이 뛰어나며 용량 제한이 없습니다.
+    - Cookie : 쿠기는 개인 pc에 Text형식으로 저장됩니다. 보안안 약하며 용량에 제한이 있습니다.
+
+ 
 - 데이터 베이스 
 1) DB 무결성과 정합성 설명
 2) DB 무결성의 4가지 설명
@@ -72,15 +83,7 @@
 9) statement와 preparestatement의 차이점
 10) SQL vs NoSQL (https://siyoon210.tistory.com/130)
 
-- 웹
-1) GET과 POST의 차이점
-2) session과 cookie 차이점과 사용 용도 설명
-3) HTML과 XML의 차이점과 장단점 설명
-4) MVC 모델이란, 프레임워크란?
-5) Spring Framework에 대한 설명 
-6) JSP와 Servlet의 차이점
-7) JSP와 ASP 그리고 PHP의 차이점
-8) AJAX에 대한 설명
+
  
 - JAVA
 1) String과 StringBuffer의 차이점
@@ -100,24 +103,44 @@
 
  
 - 알고리즘
-12) Big O란?
-13) Divide and conquer를 사용한 알고리즘 예를 들어보라
-14) Divide and conquer와 Dynamic Programming의 차이점 및 유사점은?
-15) Backtracking과 Branch and Bound의 차이점은? 
-16) Merge/Quick/Heap sort의 best, average, worst 케이스의 시간 복잡도는?
-17) Merge sort와 Quick sort의 차이점과 방식은?
-18) Quick sort와 Bubble sort의 차이점은?
-19) Floyd 알고리즘이란?
-20) Dijkstra 알고리즘이란?
-21) Floyd와 Dijkstra 알고리즘의 차이점과 정의는?
-22) 프림 알고리즘과 크루스컬 알고리즘의 차이 그리고 시간복잡도는?
-23) Knapsack problem과 Traveling Salesman Problem에 대한 설명
-24) P와 NP, NP-Completeness에 대한 설명
-25) 퀵소트와 머지소트를 캐시 히트 율과 연관지어 설명하시오
-26) 객체지향 5원칙
-27) 객체지향 특징
+1) Big O란?
+    - 알고리즘의 시간 복잡도를 의미합니다.
+2) Divide and conquer를 사용한 알고리즘 예를 들어보라
+    - Merge Sort가 있습니다.
 
- 
+3) Divide and conquer와 Dynamic Programming의 차이점 및 유사점은?
+    - 문제를 작은 단위로 나눠가며 해를 구한다는 공통점이 있습니다.
+    - DnC는 부분 문제들이 중복되지 않습니다. 하향식 해결
+    - DP는 부분 문제들이 중복되며 메모리제이션을 활용합니다. 상향식 해결
+4) Backtracking과 Branch and Bound의 차이점은? 
+    - 둘다 가지치는거 아닌교
+5) Merge/Quick/Heap sort의 best, average, worst 케이스의 시간 복잡도는?
+    - Merge는 O(NlogN)으로 일정하다
+    - Quick은 Best와 Average는 O(NlogN)이고 Worst는 O(N^2)이다ㅏ.
+    - Heap은 O(NlogN)으로 일정합니다. 다만 Cache를 잘 활용하기 어려운 특성이라 대체로 Quick보다 느립니다.
+6) Floyd 알고리즘이란?
+    - 모든 노드 간의 최단 거리를 구할 수 있는 알고리즘입니다. 시간복잡도는 O(N^3)입니다.
+    - 시작 노드 s에서 노드 e까지 가는데 m을 거쳐서 갈지 말지를 비교하며 갱신한다.
+7) Dijkstra 알고리즘이란?
+    - 한 노드에서 다른 노드까지의 최단 경로를 구하는 알고리즘입니다.
+    - 변형이 많은 알고리즘인데, 한 노드에서 다른 모든 노드와의 최단거리를 구할수 도 있습니다.
+   
+8) 프림 알고리즘과 크루스컬 알고리즘의 차이 그리고 시간복잡도는?
+    - Prim은 정점을 하나씩 추가하며 최소 신장 트리를 구합니다.
+    - Kruskal은 간선을 하나씩 추가하며 최소 신장 트리를 구합니다.
+    - 둘 다 그리디 알고리즘입니다.
+    - 간선이 적은 경우 크루스칼이, 많은 경우 프림이 유리한 경향이 있습니다.
+9) Knapsack problem과 Traveling Salesman Problem에 대한 설명
+    - 
+10) P와 NP, NP-Completeness에 대한 설명
+
+14) 퀵소트와 머지소트를 캐시 히트 율과 연관지어 설명하시오
+
+15) 객체지향 5원칙
+
+16) 객체지향 특징
+
+
 - 네트워크와 인프라 
 1) GET과 POST의 차이점
 2) TCP/IP, UDP 프로토콜 설명
