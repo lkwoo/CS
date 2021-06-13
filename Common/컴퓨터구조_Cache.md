@@ -15,7 +15,7 @@ Memory Hierarchy에서 k Level과 K+1 Level의 관계에 Cache의 개념이 적�
 <img src="../image/Cache_CM.png" width="600" height="500"> 
 
 - Cold Miss : 데이터를 처음 사용하는 경우 보통은 Load 되어 있지 않다. 누구에게나 처음은 있는 법.
-- **Conflict Miss** : Fully Associative Mapping 방식이 아닐 때, (특히 Direct Mapping 방식일 때)사용되는 데이터보다 Cache의 공간이 큼에도 Cache의 일부만을 사용해 불필요한 Miss가 발생한다. 비유하자면 바지에 주머니가 여러 갠데 강박증으로 인해 하나만 사용한다. 근데 물건을 두 개라서 하나는 꼭 손에 쥐고 다닌다.   
+- **Conflict Miss** : Fully Associative Mapping 방식이 아닐 때, (특히 Direct Mapping 방식일 때)사용되는 데이터보다 Cache의 공간이 큼에도 Cache의 일부만을 사용해 불필요한 Miss가 발생한다. 비유하자면 바지에 주머니가 여러 갠데 강박증으로 인해 하나만 사용한다. 근데 물건은 두 개라서 하나는 꼭 손에 쥐고 다닌다.(남는 주머니 안 씀)   
 그럼 Fully Associative 방식을 쓰면 되지 않나요? 그럼 Cache 자체가 느려집니다. 또 전력 소비도 커집니다.
 - Capacity miss : 필요한 데이터의 용량이 Cache 보다 큰 경우.  
 그럼 Cache의 크기를 키우면 되지 않나요? 그럼 Cache 자체가 느려집니다. 또 전력 소비도 커집니다.
