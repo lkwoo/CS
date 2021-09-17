@@ -57,3 +57,4 @@ Spatial Localty에 의해 Miss Rate가 감소하다가 RAM의 다양한 영역(C
 세 번째는 효율의 문제입니다. Cache의 사이즈가 커지면 Hit ratio가 증가하긴 하지만 Latency도 함께 증가합니다. 일정 크기부터는 Cahce size와 성능 향상이 정비례하지 않습니다.  
 
 > [Reference](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2017/c14/c14s1/)
+> [자세하게 알려주는 ](https://parksb.github.io/article/29.html)
