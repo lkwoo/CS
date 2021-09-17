@@ -1,6 +1,6 @@
 # Deadlock
 - Process가 발생 가능성이 없는 이벤트를 기다리는 상태
-- Starvation인 ready상태에서 일어나는 반면, Deadlock은 asleep상태에서 일어난다.
+- Starvation은 Ready상태에서 일어나는 반면, Deadlock은 Asleep상태에서 일어난다.
 
 ## 자원의 분류
 - Preemptible Resources
@@ -73,15 +73,4 @@
         - 모든 경우의 수를 봐야함 
     - Resource Preemption : 선점할 자원 선택. 해당 자원을 가지고 있는 프로세스 종료
     - Checkpoint-restart Method : 특정 지점을 Save. 문제 시 복구
-
-
-
-
-
-
-
-
-
-
-
 
