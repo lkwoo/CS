@@ -105,6 +105,8 @@
 
 2) 탐욕 알고리즘이란?
 3) 객체란?
+    - 객체(Object)란 속성(Attribute)과 기능(Method)을 갖고 있는 것. 변수와 함수로 이루어진 것
+    - Object는 구현할 대상. Object를 구현하기 위한 설계도가 Class. Class로 만들어 메모리에 Load된 것이 Instance.
 4) 이진 탐색 방식을 시퀀스 서치와 비교하여 이점을 설명
 
 
