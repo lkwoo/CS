@@ -1,4 +1,4 @@
-[Cache](cache)
+[Cache](#cache)
 
 # Cache
 ## Cache란?
