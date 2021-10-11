@@ -1,4 +1,8 @@
-[Cache](#cache)
+## Contents
+### 1. [Cache](#cache)
+### 2. [Endian](#endian)
+### 3. [Pipeline](#pipeline)
+-----------------------------------------------------------------------------------
 
 # Cache
 ## Cache란?
@@ -60,3 +64,16 @@ Spatial Localty에 의해 Miss Rate가 감소하다가 RAM의 다양한 영역(C
 
 > [Reference 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2017/c14/c14s1/)  
 > [Reference 2](https://parksb.github.io/article/29.html)
+
+----------------------------------------------------------------------------------------------
+
+# Endian
+[Little vs Big](https://genesis8.tistory.com/37)
+
+
+----------------------------------------------------------------------------------------------
+
+# Pipeline
+
+
+
