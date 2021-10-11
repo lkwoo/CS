@@ -1,3 +1,5 @@
+[Cache](cache)
+
 # Cache
 ## Cache란?
 Localty를 활용해 컴퓨터의 효율을 증대시키는 임시 저장 공간 혹은 기술.  
