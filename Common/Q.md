@@ -28,6 +28,15 @@
     - Write 연산이 생기는 즉시 메모리 업데이트 -> WT  
     - Cache에서 Block이 내려갈 때 -> WB
  
+- 기타
+1) 디자인 패턴이란?
+2) MVC에 대해 설명해주세요
+3) Singleton이 뭔가요?
+4) TCP/UDP으 ㅣ차이점
+5) mybatis 동작 원리에 대해 말해주세요
+6) Spring이 뭐죠? Bean, Tomcat은 뭔가요
+7) java의 GC에 대해 설명해주세요
+ 
 - 자료구조
 1) Tree란?
     - Connected Acyclic Graph라고도 불리며, 노드 사이의 간선이 최대 1개인 사이클이 없는 그래프입니다.
@@ -82,6 +91,9 @@
 8) JDBC와 ODBC의 차이점 설명
 9) statement와 preparestatement의 차이점
 10) SQL vs NoSQL (https://siyoon210.tistory.com/130)
+11) Redis란?
+12) RDBMS와 NoSQL의 차이점은? 강점과 약점은?
+13)  
 
 
  
