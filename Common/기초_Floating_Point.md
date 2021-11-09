@@ -12,7 +12,10 @@ IEEE 표준 표현식은 다음과 같다.
 
 32-Bit와 64-Bit 두 가지 타입이 가장 많이 쓰인다. 그 중 64-bit가 더 잘 쓰인다. 비트 수에 따라 표현할 수 있는 범위와 정확도의 차이만 있고 원리는 같다.  
 1. Single-Precision(32-bit, float in C)  
+    - Sign 1 bit, Exponent  8 bits, Mantissa 23 bits 
 2. Double-Precision(64-bit, double in C)  
+    - Sign 1 bit, Exponent 11 bits, Mantissa 52 bits 
+
 
 **S(Sign)** 
 - 부호비트. MSB(최상위비트)에 표현된다.
@@ -25,8 +28,8 @@ IEEE 표준 표현식은 다음과 같다.
         - bias가 적용됩니다. n bit로 이루어졌을 때, 2^(N-1) - 1 를 뺀 값으로 encode 됩니다. 즉 1 - 127 = -126이 최소값입니다.
         - sign이 아니라 bias를 적용하는 이유는 값을 비교하기 훨씬 편하기 때문입니다.
         - 아래의 M에도 영향을 줍니다. 앞에 1이 생략되었다고 가정합니다. 예를 들어 M이 0100...1011라면 10100...1011로 해석합니다.(1bit 이득^^)
-    2. Denomalized Values : 0000_0000
-    3. Special Values : 모든 bit가 1
+    2. Denomalized Values : 0000_0000, E의 모든 bit가 0
+    3. Special Values : 1111_1111, E의 모든 bit가 1
         - M == 0 : +Inf, -Inf (Sign을 따른다)
         - M != 0 : NaN(Not a Number)
 
