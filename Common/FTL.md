@@ -24,7 +24,7 @@
   - Erase : 1500μs
 
 ### SSD의 구성
-<img src="../image/FTL_architecture_1.pg" width="600" height="400">  
+<img src="../image/FTL_architecture_1.PNG" width="600" height="400">  
 - Host Interface : SATA, PCIe(NVMe) 등
 - SSD Controller는 자체 Processor와 RAM을 이용해 역할을 수행한다
 
