@@ -5,7 +5,9 @@
 
 ## FTL의 역할
 - Flash Memory의 각 Sector들의 수명 효율 개선
-- Disk I/O의 동작 지원
+- Disk I/O의 동작 지원(HDD와 동일한 Host Interface 지원)
+- Logical Block Mapping
+- Garbage Collection
 
 ## FTL Architecture
 <img src="../image/FTL_architecture_3.jpg" width="600" height="400">  
@@ -57,4 +59,15 @@
 - Write는 Page 단위로 실행되르모 Page Size와 다른 모든 Write는 부가적인 쓰기가 수행된다
 1. Page Size보다 작은 데이터의 쓰기는 지양하는 것이 좋다
 2. Write는 Page 단위에 맞출 수 있으면 좋다
-3. 작은 데이터으 Write는 Buffering을 통해 Throughput을 높이자
+3. 작은 데이터의 Write는 Buffering을 통해 Throughput을 높이자
+
+### Wear Leveling
+- P/E Cycle이 모든 셀에 고루 분산되도록 하는 알고리즘
+- Block 선택 과정에서 특정 Block의 위치를 바꿀 수도 있는데, 이 과정에서 Write Amplification 발생
+- 최선의 성능과 수명을 위해 적절한 Wear Leveling과 Garbage Collection이 필요
+
+## Logical Block Mapping
+- 호스트 영역의 논리 주소(LBA, Logical Block Address)를 NAND 플래시 메모리의 물리적 주소(PBA, Physical Block Address)로 변환해주는 역할
+
+## Garbage Collection
+- “stale” 상태의 페이지들이 삭제(Erase)되어 새로운 쓰기 데이터를 저장할 수 있도록 해주는 과정
