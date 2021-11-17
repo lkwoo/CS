@@ -44,6 +44,17 @@
   - 1 Byte의 data를 Write 하더라도 Page 단위로 작성된다
   - 이런 불필요한 Write Overhead를 'Write Amplication'이라고 한다
 3. **Erase**는 **Block**단위로 실행
-  - 
-4. 
+  - Erase에 필요한 전압과 Write에 필요한 전압이 다르다
+  - Erase에 더 높은 전압이 필요한데, Page 단위로 수행 시 주변 Cell에 영향을 끼칠 수 있어 Block 단위로 진행한다
+  - 그래서 SSD는 Overwrite가 불가하다 
+4. Pages cannot be Overwritten
+  -  SSD는 'Free' 상태에서 Write 할 수 있다
+  -  즉, In-Place update가 불가하다
+  -  데이터의 변화(Write or Erase)가 생기면, 해당 Cell들을 'Stale'로 표시하고 새로운 곳에 작성한다
+  -  이를 Read-Modify-Write라고 한다
 
+### Write Amplification
+- Write는 Page 단위로 실행되르모 Page Size와 다른 모든 Write는 부가적인 쓰기가 수행된다
+1. Page Size보다 작은 데이터의 쓰기는 지양하는 것이 좋다
+2. Write는 Page 단위에 맞출 수 있으면 좋다
+3. 작은 데이터으 Write는 Buffering을 통해 Throughput을 높이자
