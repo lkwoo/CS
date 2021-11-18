@@ -84,4 +84,7 @@
 - 드물게 Write되는 Cold data와 자주 Write되는 Hot data를 분리하여 Write Amplification을 낮춘다
 
 ## Over Provisioning
-
+- 저장 공간의 일부(10~25%)를 OS도 모르는 여유 공간으로 사용한다
+- 수명이 다한 Cell이 발생하면 Over-provisioning 된 공간으로 대체하여 SSD의 전체 수명을 늘린다
+- Erase가 Write보다 느리므로 Random Write가 지속적으로 발생하여 Free 상태의 공간이 부족해지는 경우에 버퍼로 사용하기도 한다
+- 갑작스런 전원 차단이 발생해도 일관성을 유지할 수 있도록 Super Capacity를 장착하기도 한다
