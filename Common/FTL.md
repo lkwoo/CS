@@ -77,8 +77,11 @@
   1. 같은 Block의 Page들ㅇ
 
 
-## Garbage Collection
+### Garbage Collection
 - 'Stale' 상태의 페이지들이 삭제(Erase)되어 새로운 쓰기 데이터를 저장할 수 있도록 해주는 과정
 - Write보다 Erase가 더 느리다. 따라서 Write를 할 때마다 Erase를 수행하면 동작이 느려진다
 - 그래서 Free 상태의 Block들을 미리 만들어 놓기 위해 Garbage Collection이 수행된다
 - 드물게 Write되는 Cold data와 자주 Write되는 Hot data를 분리하여 Write Amplification을 낮춘다
+
+## Over Provisioning
+
