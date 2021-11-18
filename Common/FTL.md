@@ -6,7 +6,7 @@
 ## FTL의 역할
 - Flash Memory의 각 Sector들의 수명 효율 개선
 - Disk I/O의 동작 지원(HDD와 동일한 Host Interface 지원)
-- Logical Block Mapping
+- Logical Block Mapping : 현재의 LBA는 HDD에 최적화 되어 있다. Nand Flash에도 동일하게 적용되도록
 - Garbage Collection
 
 ## FTL Architecture
@@ -68,6 +68,17 @@
 
 ## Logical Block Mapping
 - 호스트 영역의 논리 주소(LBA, Logical Block Address)를 NAND 플래시 메모리의 물리적 주소(PBA, Physical Block Address)로 변환해주는 역할
+- LBA와 PBA로 구성된 테이블을 가진다. SSD의 RAM에 저장되며 안전을 위해 Flash Memory에도 저장된다
+- Block Mapping은 Page단위로 하면 단순하고 쉽지만 많은 메모리가 요구되고, Block 단위로 하면 메모리는 적게 요구되지만 Write Amplification이 커진다. 따라서 Trade off 필요
+- Hybrid 형태인 Log-Block Mapping을 주로 사용
+
+### Log Block Mapping
+- Write연산을 Log Block에 순차적으로 저장하고, Log Block에 가득차면 동일한 LBN(Log Block Number)을 갖는 Page들과 병합하여 새로운 free Block에 저장하는 방식
+  1. 같은 Block의 Page들ㅇ
+
 
 ## Garbage Collection
-- “stale” 상태의 페이지들이 삭제(Erase)되어 새로운 쓰기 데이터를 저장할 수 있도록 해주는 과정
+- 'Stale' 상태의 페이지들이 삭제(Erase)되어 새로운 쓰기 데이터를 저장할 수 있도록 해주는 과정
+- Write보다 Erase가 더 느리다. 따라서 Write를 할 때마다 Erase를 수행하면 동작이 느려진다
+- 그래서 Free 상태의 Block들을 미리 만들어 놓기 위해 Garbage Collection이 수행된다
+- 드물게 Write되는 Cold data와 자주 Write되는 Hot data를 분리하여 Write Amplification을 낮춘다
